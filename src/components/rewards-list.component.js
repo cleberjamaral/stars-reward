@@ -59,7 +59,7 @@ export default class RewardsList extends Component {
               <th>Description</th>
               <th>Stars</th>
               <th>Date</th>
-              <th>Actions</th>
+              <th>Operations</th>
             </tr>
           </thead>
           <tbody>
