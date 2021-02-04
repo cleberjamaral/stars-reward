@@ -23,7 +23,7 @@ export default class EditReward extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:5000/rewards/'+this.props.match.params.id)
+    axios.get('/rewards/'+this.props.match.params.id)
       .then(response => {
         this.setState({
           pupilname: response.data.pupilname,
@@ -36,7 +36,7 @@ export default class EditReward extends Component {
         console.log(error);
       })
 
-    axios.get('http://localhost:5000/pupils/')
+    axios.get('/pupils/')
       .then(response => {
         if (response.data.length > 0) {
           this.setState({
@@ -86,7 +86,7 @@ export default class EditReward extends Component {
 
     console.log(reward);
 
-    axios.post('http://localhost:5000/rewards/update/' + this.props.match.params.id, reward)
+    axios.post('/rewards/update/' + this.props.match.params.id, reward)
       .then(res => console.log(res.data));
 
     window.location = '/';

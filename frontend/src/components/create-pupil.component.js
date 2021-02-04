@@ -28,7 +28,7 @@ export default class CreatePupil extends Component {
 
     console.log(pupil);
 
-    axios.post('http://localhost:5000/pupils/add', pupil)
+    axios.post('/pupils/add', pupil)
       .then(res => console.log(res.data));
 
     this.setState({

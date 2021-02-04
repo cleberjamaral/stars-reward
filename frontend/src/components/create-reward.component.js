@@ -23,7 +23,7 @@ export default class CreateReward extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:5000/pupils/')
+    axios.get('/pupils/')
       .then(response => {
         if (response.data.length > 0) {
           this.setState({
@@ -74,7 +74,7 @@ export default class CreateReward extends Component {
 
     console.log(reward);
 
-    axios.post('http://localhost:5000/rewards/add', reward)
+    axios.post('/rewards/add', reward)
       .then(res => console.log(res.data));
 
     window.location = '/';

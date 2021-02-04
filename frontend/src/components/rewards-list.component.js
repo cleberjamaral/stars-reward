@@ -24,7 +24,7 @@ export default class RewardsList extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:5000/rewards/')
+    axios.get('/rewards/')
       .then(response => {
         this.setState({ rewards: response.data })
       })
@@ -34,7 +34,7 @@ export default class RewardsList extends Component {
   }
 
   deleteReward(id) {
-    axios.delete('http://localhost:5000/rewards/'+id)
+    axios.delete('/rewards/'+id)
       .then(response => { console.log(response.data)});
 
     this.setState({
